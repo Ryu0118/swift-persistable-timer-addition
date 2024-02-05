@@ -31,6 +31,7 @@ let package = Package(
             name: "PersistableTimerAddition",
             dependencies: [
                 .product(name: "PersistableTimer", package: "swift-persistable-timer"),
+                .product(name: "Dependencies", package: "swift-dependencies")
                 .product(name: "DependenciesMacros", package: "swift-dependencies")
             ]
         ),
