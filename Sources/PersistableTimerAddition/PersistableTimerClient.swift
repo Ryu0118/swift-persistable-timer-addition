@@ -6,7 +6,7 @@ import DependenciesMacros
 @DependencyClient
 public struct PersistableTimerClient {
     /// Provides a continuous stream of timer states, updated at regular intervals.
-    public var timerStream: @Sendable () -> AsyncStream<TimerState>
+    public var timerStream: @Sendable () -> AsyncStream<TimerState> = { unimplemented("\(Self.self).timerStream") }
 
     /// Retrieves the persisted timer data, if available.
     /// - Throws: Errors encountered while fetching the timer data.
@@ -14,7 +14,7 @@ public struct PersistableTimerClient {
 
     /// Checks if a timer is currently running.
     /// - Returns: A Boolean value indicating whether a timer is running.
-    public var isTimerRunning: @Sendable () -> Bool
+    public var isTimerRunning: @Sendable () -> Bool = { unimplemented("\(Self.self).isTimerRunning") }
 
     /// Restores the timer from the last known state and starts the timer if it was running.
     /// - Throws: Errors encountered while restoring the timer.
