@@ -48,7 +48,7 @@ extension PersistableTimerClient {
     /// - Returns: A `PersistableTimerClient` instance configured with a live `PersistableTimer`.
     public static func live(
         dataSourceType: DataSourceType,
-        updateInterval: TimeInterval
+        updateInterval: TimeInterval = 1
     ) -> Self {
         let timer = PersistableTimer(
             dataSourceType: dataSourceType,
