@@ -1,3 +1,4 @@
+import Foundation
 import Dependencies
 import DependenciesMacros
 
@@ -45,8 +46,14 @@ extension PersistableTimerClient {
     /// Creates a live instance of `PersistableTimerClient` with the specified data source type.
     /// - Parameter dataSourceType: The type of data source to use, either in-memory or UserDefaults.
     /// - Returns: A `PersistableTimerClient` instance configured with a live `PersistableTimer`.
-    public static func live(dataSourceType: DataSourceType) -> Self {
-        let timer = PersistableTimer(dataSourceType: dataSourceType)
+    public static func live(
+        dataSourceType: DataSourceType,
+        updateInterval: TimeInterval
+    ) -> Self {
+        let timer = PersistableTimer(
+            dataSourceType: dataSourceType,
+            updateInterval: updateInterval
+        )
          return PersistableTimerClient(
              timerStream: { timer.timeStream },
              getTimerData: { try timer.getTimerData() },
