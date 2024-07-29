@@ -21,7 +21,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/Ryu0118/swift-persistable-timer", from: "0.1.0"),
+        .package(url: "https://github.com/Ryu0118/swift-persistable-timer", from: "0.2.1"),
         .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.2.1")
     ],
     targets: [
