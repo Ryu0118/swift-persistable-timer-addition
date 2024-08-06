@@ -10,12 +10,30 @@
       }
     },
     {
+      "identity" : "swift-async-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-async-algorithms.git",
+      "state" : {
+        "revision" : "6ae9a051f76b81cc668305ceed5b0e0a7fd93d20",
+        "version" : "1.0.1"
+      }
+    },
+    {
       "identity" : "swift-clocks",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-clocks",
       "state" : {
         "revision" : "a8421d68068d8f45fbceb418fbf22c5dad4afd33",
         "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections.git",
+      "state" : {
+        "revision" : "3d2dc41a01f9e49d84f0a3925fb858bed64f702d",
+        "version" : "1.1.2"
       }
     },
     {
@@ -41,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Ryu0118/swift-persistable-timer",
       "state" : {
-        "revision" : "5a9d2d8201f7b9a005d849ee5c480cd2a7fcbc83",
-        "version" : "0.1.0"
+        "revision" : "1d52ad27208a0d30c150937b2c38161b9d48f920",
+        "version" : "0.3.0"
       }
     },
     {

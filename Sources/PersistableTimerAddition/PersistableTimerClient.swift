@@ -26,20 +26,20 @@ public struct PersistableTimerClient {
     ///   - type: The type of timer, either stopwatch or countdown.
     ///   - forceStart: A Boolean value to force start the timer, ignoring if another timer is already running.
     /// - Throws: Errors encountered while starting the timer.
-    public var start: @Sendable (_ type: RestoreType, _ forceStart: Bool) async throws -> Void
+    public var start: @Sendable (_ type: RestoreType, _ forceStart: Bool) async throws -> RestoreTimerData
 
     /// Resumes a paused timer.
     /// - Throws: Errors encountered while resuming the timer.
-    public var resume: @Sendable () async throws -> Void
+    public var resume: @Sendable () async throws -> RestoreTimerData
 
     /// Pauses the currently running timer.
     /// - Throws: Errors encountered while pausing the timer.
-    public var pause: @Sendable () async throws -> Void
+    public var pause: @Sendable () async throws -> RestoreTimerData
 
     /// Finishes the timer and optionally resets the elapsed time.
     /// - Parameter isResetTime: A Boolean value indicating whether to reset the elapsed time upon finishing.
     /// - Throws: Errors encountered while finishing the timer.
-    public var finish: @Sendable (_ isResetTime: Bool) async throws -> Void
+    public var finish: @Sendable (_ isResetTime: Bool) async throws -> RestoreTimerData
 }
 
 extension PersistableTimerClient {
