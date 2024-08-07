@@ -5,7 +5,7 @@ import DependenciesMacros
 /// A client for managing a persistable timer, capable of restoring state after application termination.
 /// This client abstracts the functionalities of a `PersistableTimer` into a set of dependency functions.
 @DependencyClient
-public struct PersistableTimerClient {
+public struct PersistableTimerClient: Sendable {
     /// Provides a continuous stream of timer states, updated at regular intervals.
     public var timerStream: @Sendable () -> AsyncStream<TimerState> = { unimplemented("\(Self.self).timerStream") }
 
@@ -48,11 +48,13 @@ extension PersistableTimerClient {
     /// - Returns: A `PersistableTimerClient` instance configured with a live `PersistableTimer`.
     public static func live(
         dataSourceType: DataSourceType,
-        updateInterval: TimeInterval = 1
+        updateInterval: TimeInterval = 1,
+        useFoundationTimer: Bool = false
     ) -> Self {
         let timer = PersistableTimer(
             dataSourceType: dataSourceType,
-            updateInterval: updateInterval
+            updateInterval: updateInterval,
+            useFoundationTimer: useFoundationTimer
         )
          return PersistableTimerClient(
              timerStream: { timer.timeStream },

@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Ryu0118/swift-persistable-timer",
       "state" : {
-        "revision" : "1d52ad27208a0d30c150937b2c38161b9d48f920",
-        "version" : "0.3.0"
+        "revision" : "df701fbcc7f587c3b758656d3e0c79a9f165a9fc",
+        "version" : "0.4.0"
       }
     },
     {
